@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<YealinkIPPhoneTextMenu 
+  style="numbered" 
+  Beep="no" 
+  Timeout="30" 
+  LockIn="no">
+
+  <Title wrap="yes">Phone Services</Title>
+
+  <MenuItem>
+    <Prompt>Heise News</Prompt>
+    <URI>https://www.heise.de/rss/heise.rdf</URI>
+    <Dial>456</Dial>
+    <Selection>12345</Selection>
+  </MenuItem>
+
+  <MenuItem>
+    <Prompt>Google News</Prompt>
+    <URI>https://news.google.com/rss?hl=de&amp;gl=DE&amp;ceid=DE:de</URI>
+    <Dial>1001</Dial>
+    <Selection>4567</Selection>
+  </MenuItem>
+</YealinkIPPhoneTextMenu>

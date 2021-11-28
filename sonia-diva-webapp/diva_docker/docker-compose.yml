@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    command: [nginx-debug, '-g', 'daemon off;']
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html:ro
+      - ./nginx/etc:/etc/nginx
+
+  dgcv:
+    image: bellsoft/liberica-openjdk-alpine:11
+    container_name: diva
+    command: [./diva/startup.sh]
+    volumes:
+      - ./diva:/diva

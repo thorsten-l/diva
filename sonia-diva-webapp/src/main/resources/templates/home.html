@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header::dgcvHeader(title='DiVa')"></div>
+  <style>
+    h1 { margin-top: 1em }
+    #buildinfo { 
+      font-size: 70%; 
+      width: 30%;
+      position: absolute;
+      bottom: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Digital Green Certificate Validator (DiVa)</h1>
+
+    <form th:action="@{/scanner}" th:object="${formObject}" method='POST'>
+      <input th:field="*{apiToken}" type="hidden" />
+      <input th:field="*{readerUuid}" type="hidden" />
+      <input th:field="*{action}" type="hidden" />
+
+      <div class="mb-3">
+        <label for="organization" class="form-label">Organization</label>
+        <select id="organization" th:field="*{organization}" class="form-select form-select-lg">
+          <option value='Ostfalia'>Ostfalia</option>
+        </select>                          
+      </div>
+      
+      <div class="mb-3">
+        <label for="organizationUnit" class="form-label">Fakultät / Einrichtung</label>
+        <select id="organizationUnit" th:field="*{organizationUnit}" class="form-select form-select-lg">
+          <option value='Rechenzentrum'>Rechenzentrum</option>
+        </select>
+      </div>
+      
+      <div class="mb-3">
+        <label for="cameraIndex" class="form-label">Kamera</label>
+        <select id="cameraIndex" th:field="*{cameraIndex}" class="form-select form-select-lg">
+          <option value='0'>Frontkamera</option>
+          <option value='1'>Rückkamera</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Starte Scanner</button>
+      
+    </form>
+
+    <div th:replace="fragments/footer::dgcvBuildinfo"></div>
+  </div>
+  <div th:replace="fragments/footer::dgcvFooter"></div>
+</body>
+</html>

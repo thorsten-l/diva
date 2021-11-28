@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+<div th:fragment="dgcvHeader" th:remove="tag"><title th:text='${title}'></title>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" ></link>
+  <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} " ></link>
+  <link th:rel="icon" type="image/png" sizes="16x16" th:href="@{/public/icons/favicon-16x16.png}"/>
+  <link th:rel="icon" type="image/png" sizes="32x32" th:href="@{/public/icons/favicon-32x32.png}"/></div>
+
+  </body>
+</html>

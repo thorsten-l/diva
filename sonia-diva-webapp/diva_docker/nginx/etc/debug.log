@@ -1,0 +1,1 @@
+2021/01/04 19:07:04 [error] 29#29: *8 open() "/etc/nginx/html/login" failed (2: No such file or directory), client: 172.20.0.1, server: berylla.l7g.de, request: "GET /login?redirect=%2F HTTP/1.1", host: "berylla.l7g.de:8443"
